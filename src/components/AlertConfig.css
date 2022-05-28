@@ -1,0 +1,93 @@
+tr {
+    border-bottom: 1px solid #6b3c3c;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.freq {
+    margin-left: 53px;
+    padding: 8px;
+    width: 56px;
+}
+
+.save-btn {
+    /* background-color: none; */
+    border: 1px solid red;
+    border-radius: 50px;
+    color: red;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    padding: 10px;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+h3 {
+    margin: 23px;
+    text-align: center;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.add {
+    border: 2px solid #90ee90;
+    border-radius: 50%;
+    color: green;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 6px;
+    width: 38px;
+}
+
+.del-btn {
+    background-color: #fff;
+    border: 0.8px solid red;
+    border-radius: 50%;
+    color: red;
+    font-size: 18px;
+    margin-left: 2.5rem;
+    padding: 3px;
+    width: 38px;
+}
+
+tr {
+    border-bottom: 1px solid #6b3c3c;
+    width: 100%;
+}
+
+user agent stylesheet table>tr {
+    vertical-align: middle;
+}
+
+.input--Name>input {
+    border-radius: 9px;
+    outline: none;
+    outline: 0.01px lightgray;
+    padding: 7px;
+}
+
+td,
+th {
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+}
