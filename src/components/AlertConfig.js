@@ -1,37 +1,35 @@
 import React, { useState } from 'react'
 import "./AlertConfig.css"
-import DataList from '../components/TableBodyData'
-
+import TableBodyData from './TableBodyData'
 
 const data = {
     alert_name: "",
-    independent_var: ['inputNumber 1', 'input 2', 'Input 3'],
-    dependent_var: ['InputNumber1', 'input 4', 'Input 5'],
+    independent_var: [
+        { label: 'inputNumber 1', value: 'inputNumber 1' },
+        { label: 'input 2', value: 'inputNumber 2' },
+        { label: 'Input 3', value: 'inputNumber 3' }],
+    dependent_var: [
+        { label: 'inputNumber 1', value: 'inputNumber 1' },
+        { label: 'input 3', value: 'inputNumber 3' },
+        { label: 'Input 4', value: 'inputNumber 4' }],
     freq: null
 }
+
 const Xyz = () => {
     const [formData, setFormData] = useState(false)
-    const [state, setState] = useState(data)
-    const [item, setItem] = useState([])
+    const [initialData, setInitialData] = useState([])
+    const [rowData, setRowData] = useState([])
+
 
     const addItem = () => {
-        if (formData) {
-            setItem(...state, DataList)
-        }
-        else {
-            console.log("Clicked on add btn")
-        }
+        formData ? setInitialData([...initialData]) : console.log("Clicked on add btn")
+        setRowData([...rowData, {}])
         setFormData(true)
-        console.log(state);
     }
 
-    // Deleting the item
     const deleteItem = () => {
-        console.log("clicked on delete btn");
         setFormData(false)
     }
-
-
 
     return (
         <>
@@ -49,13 +47,9 @@ const Xyz = () => {
                         </tr>
                     </thead>
                     {
-                        formData ? <DataList OnClick={deleteItem} option={data} />
-                            : null
-                    }
-                    {
-                        item.map((index) =>  <DataList key={index
-                            } OnClick={deleteItem} option={data} />
-                        )
+                        rowData.map(() => {
+                            return <TableBodyData OnClick={deleteItem} option={data} setRowData={setRowData} />
+                        })
                     }
                 </table>
             </div>
